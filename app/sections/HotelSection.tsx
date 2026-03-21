@@ -1,13 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Bath, Glasses, Utensils, Waves } from 'lucide-react'
+import { Bath, Glasses, Waves } from 'lucide-react'
 
 export default function HotelSection() {
   const facilities = [
     { icon: Waves, label: '泳池', desc: '住宿区设施皆可使用' },
     { icon: Bath, label: '泡池', desc: '放松身心的好去处' },
-    { icon: Utensils, label: '餐厅', desc: '提供精美餐饮服务' },
   ]
 
   return (
@@ -69,15 +68,14 @@ export default function HotelSection() {
           className="bg-wedding-cream rounded-2xl p-6 mb-8"
         >
           <p className="text-wedding-text/80 leading-relaxed">
-            酒店分为三个区域，包括<span className="font-medium text-wedding-gold">住宿区</span>、
-            <span className="font-medium text-wedding-gold">餐厅区</span>、
+            酒店分为两个区域，包括<span className="font-medium text-wedding-gold">住宿区</span>、
             <span className="font-medium text-wedding-gold">沙滩区</span>。
             住宿区的所有设施皆可使用，包括泳池与泡池。
             房间将作为未入住宾客的换洗间；具体房间请持续关注该网站。
           </p>
           <p className="text-wedding-text/80 leading-relaxed mt-4">
             婚礼当天除工作人员外，住宿区仅有本场婚礼的宾客；
-            餐厅与沙滩区域为外来游客与宾客共同使用的空间，可前往拍照打卡。
+            沙滩区域为外来游客与宾客共同使用的空间，可前往拍照打卡。
           </p>
         </motion.div>
 
@@ -86,7 +84,7 @@ export default function HotelSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
+          className="grid grid-cols-2 gap-4 mb-8 md:max-w-xl md:mx-auto"
         >
           {facilities.map((item, index) => (
             <motion.div

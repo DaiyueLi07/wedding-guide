@@ -15,7 +15,7 @@ export default function HeroSection() {
         <motion.img
           src="/images/hero-couple-2.jpg"
           alt="新人照片"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-[36%_center] md:object-center"
         />
         <div className="absolute inset-0 bg-black/30" />
       </motion.div>

@@ -24,20 +24,14 @@ export default function AttractionSection() {
     {
       name: '溪涌滨海栈道',
       desc: '栈道长约5km，出酒店即可进入，沿途欣赏山海美景',
-      image: '/images/xichong-walkway.jpg',
+      image: '/images/xichong-2.jpg',
       mapQuery: '溪涌滨海栈道',
     },
     {
       name: '观海平台云桥',
       desc: '出酒店左行可步行至观海平台云桥，欣赏沿途山海美景',
-      image: '/images/yunqiao.png',
+      image: '/images/guanhai.jpg',
       mapQuery: '溪涌观海平台',
-    },
-    {
-      name: '溪涌沙滩',
-      desc: '出酒店右行可步行至溪涌沙滩，享受阳光沙滩的惬意时光',
-      image: '/images/xichong-beach.jpg',
-      mapQuery: '溪涌沙滩',
     },
   ]
 
@@ -55,7 +49,7 @@ export default function AttractionSection() {
           <h2 className="text-3xl md:text-4xl font-serif text-wedding-text">附近景点</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {attractions.map((attraction, index) => (
             <motion.div
               key={attraction.name}
@@ -76,9 +70,7 @@ export default function AttractionSection() {
                 <h3 className="text-lg font-medium text-wedding-text mb-2">
                   {attraction.name}
                 </h3>
-                <p className="text-sm text-wedding-muted mb-4">
-                  {attraction.desc}
-                </p>
+                <p className="text-sm text-wedding-muted mb-4">{attraction.desc}</p>
                 <MapButton address={attraction.mapQuery} label="查看地图" />
               </div>
             </motion.div>

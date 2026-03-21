@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { MapPin, Train, Plane, Car } from 'lucide-react'
+import { Car, MapPin, Plane, TramFront } from 'lucide-react'
 
 const MapButton = ({ address, label }: { address: string; label: string }) => {
   const amapUrl = `https://uri.amap.com/search?keyword=${encodeURIComponent(address)}`
@@ -35,7 +35,6 @@ export default function TransportSection() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {/* 深圳市内 */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -45,20 +44,27 @@ export default function TransportSection() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-wedding-apricot rounded-full flex items-center justify-center">
-                <Train className="w-5 h-5 text-wedding-gold" />
+                <TramFront className="w-5 h-5 text-wedding-gold" />
               </div>
               <h3 className="text-xl font-medium text-wedding-text">深圳市内</h3>
             </div>
             <div className="space-y-3 text-wedding-text/80">
               <p>地铁2/8号线溪涌站A口出站，步行约10分钟</p>
-              <p>驾车距福田约45分钟车程</p>
+              <div className="flex items-start gap-2">
+                <Car className="w-4 h-4 mt-0.5 text-wedding-gold" />
+                <div>
+                  <p className="font-medium">自驾</p>
+                  <p>距福田约45分钟车程</p>
+                  <p>距罗湖约35分钟车程</p>
+                  <p>距南山约50分钟车程</p>
+                </div>
+              </div>
               <div className="pt-2">
-                <MapButton address="松善山海度假酒店" label="导航至酒店" />
+                <MapButton address="松善·SENSEA山海度假酒店" label="导航至酒店" />
               </div>
             </div>
           </motion.div>
 
-          {/* 深圳市外 */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,18 +80,19 @@ export default function TransportSection() {
             </div>
             <div className="space-y-3 text-wedding-text/80 text-sm">
               <div className="flex items-start gap-2">
-                <Train className="w-4 h-4 mt-0.5 text-wedding-gold" />
+                <TramFront className="w-4 h-4 mt-0.5 text-wedding-gold" />
                 <div>
                   <p className="font-medium">高铁</p>
-                  <p>请至深圳坪山站，距酒店约35分钟车程</p>
+                  <p>深圳北站：车程约 1 小时，周末或节假日建议多预留 20-30 分钟</p>
+                  <p>深圳坪山站：距酒店约35分钟车程</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <Plane className="w-4 h-4 mt-0.5 text-wedding-gold" />
                 <div>
                   <p className="font-medium">飞机</p>
-                  <p>深圳宝安机场（约1小时10分钟）</p>
-                  <p>惠州平潭机场（约1小时5分钟）</p>
+                  <p>深圳宝安机场（约1小时10分钟车程）</p>
+                  <p>惠州平潭机场（约1小时5分钟车程）</p>
                 </div>
               </div>
               <p className="text-xs text-wedding-muted pt-2">

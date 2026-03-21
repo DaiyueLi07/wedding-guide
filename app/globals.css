@@ -12,6 +12,20 @@ body {
   background: rgb(var(--background-rgb));
 }
 
+.font-poetic {
+  font-family: "Iowan Old Style", "Baskerville", "Palatino Linotype", "Times New Roman", "Songti SC", "STSong", serif;
+  letter-spacing: 0.04em;
+}
+
+.font-poetic-cn {
+  font-family: "STKaiti", "Kaiti SC", "Songti SC", "STSong", serif;
+  letter-spacing: 0.12em;
+}
+
+.text-shadow-soft {
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

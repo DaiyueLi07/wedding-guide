@@ -1,8 +1,8 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import HeroSection from './sections/HeroSection'
 import TransportSection from './sections/TransportSection'
+import WeatherSection from './sections/WeatherSection'
 import HotelSection from './sections/HotelSection'
 import AttractionSection from './sections/AttractionSection'
 import TravelGuideSection from './sections/TravelGuideSection'
@@ -17,6 +17,7 @@ export default function Home() {
     <main className="min-h-screen bg-wedding-cream">
       <HeroSection />
       <TransportSection />
+      <WeatherSection />
       <HotelSection />
       <AttractionSection />
       <TravelGuideSection />

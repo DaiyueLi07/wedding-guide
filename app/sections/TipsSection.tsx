@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Heart, Clock, Users, Camera, Sparkles } from 'lucide-react'
+import { Camera, Clock, Heart, House, Phone, Sparkles, Users } from 'lucide-react'
 
 export default function TipsSection() {
   const tips = [
@@ -30,6 +30,16 @@ export default function TipsSection() {
       title: '强烈建议提早抵达',
       desc: '享受酒店与周边的美景，留下美好回忆',
     },
+    {
+      icon: Phone,
+      title: '联系方式',
+      desc: '代悦：13678421344；溟洋：15652908317',
+    },
+    {
+      icon: House,
+      title: '如有不周，敬请谅解',
+      desc: '这是一场我们在工作地DIY的婚礼，从场地布置到流程设计，每一个细节都倾注了我们的心意。多数亲朋好友都远道而来，如有不周之处，还请多多包涵。',
+    },
   ]
 
   return (
@@ -55,7 +65,7 @@ export default function TipsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`bg-wedding-cream rounded-xl p-5 hover:bg-wedding-apricot/20 transition-colors ${
-                index === 0 ? 'md:col-span-2' : ''
+                index === tips.length - 1 ? 'md:col-span-2' : ''
               }`}
             >
               <div className="flex items-start gap-4">

@@ -1,12 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Bath, Glasses, Waves } from 'lucide-react'
+import { Bath, Camera, Glasses, ShowerHead, Waves } from 'lucide-react'
 
 export default function HotelSection() {
   const facilities = [
-    { icon: Waves, label: '泳池', desc: '住宿区设施皆可使用' },
-    { icon: Bath, label: '泡池', desc: '放松身心的好去处' },
+    { icon: Waves, label: '泳池与泡池', desc: '住宿区设施皆可使用' },
+    { icon: Bath, label: '储藏柜', desc: '位于酒店3楼' },
+    { icon: ShowerHead, label: '淋浴间', desc: '于酒店3楼' },
+    { icon: Camera, label: '宾客拍照服务', desc: '当日13:00 - 次日12:00' },
   ]
 
   return (
@@ -52,7 +54,7 @@ export default function HotelSection() {
         >
           <div className="bg-wedding-cream rounded-2xl p-4">
             <div className="aspect-video rounded-xl overflow-hidden bg-black/5">
-              <video controls className="w-full h-full" poster="/images/hotel-1.jpg">
+              <video controls className="w-full h-full" poster="/images/hotel-1-v2.jpg">
                 <source src="/images/hotel-video.mp4" type="video/mp4" />
                 您的浏览器不支持视频播放
               </video>
@@ -71,11 +73,12 @@ export default function HotelSection() {
             酒店分为两个区域，包括<span className="font-medium text-wedding-gold">住宿区</span>、
             <span className="font-medium text-wedding-gold">沙滩区</span>。
             住宿区的所有设施皆可使用，包括泳池与泡池。
-            房间将作为未入住宾客的换洗间；具体房间请持续关注该网站。
+            酒店有公共淋浴间与储藏柜，于酒店3楼。酒店配备专业摄影师，可自行与摄影师预约并索取照片，
+            入住酒店的宾客可错峰次日早晨预约。具体设施与服务详情可咨询工作人员相应设施。
           </p>
           <p className="text-wedding-text/80 leading-relaxed mt-4">
-            婚礼当天除工作人员外，住宿区仅有本场婚礼的宾客；
-            沙滩区域为外来游客与宾客共同使用的空间，可前往拍照打卡。
+            婚礼当天除工作人员外，住宿区仅有本场婚礼的宾客，您入场后的手系飘带是入场凭证；
+            沙滩区域与悬崖餐厅为外来游客与宾客共同使用的空间，可前往拍照打卡。
           </p>
         </motion.div>
 
@@ -84,7 +87,7 @@ export default function HotelSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="grid grid-cols-2 gap-4 mb-8 md:max-w-xl md:mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
         >
           {facilities.map((item, index) => (
             <motion.div

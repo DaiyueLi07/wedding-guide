@@ -11,20 +11,22 @@ import TimelineSection from './sections/TimelineSection'
 import DressCodeSection from './sections/DressCodeSection'
 import TipsSection from './sections/TipsSection'
 import FooterSection from './sections/FooterSection'
+import BackgroundMusic from './components/BackgroundMusic'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-wedding-cream">
+      <BackgroundMusic />
       <HeroSection />
       <TransportSection />
       <WeatherSection />
       <HotelSection />
-      <AttractionSection />
-      <TravelGuideSection />
-      <FoodSection />
       <TimelineSection />
       <DressCodeSection />
       <TipsSection />
+      <AttractionSection />
+      <TravelGuideSection />
+      <FoodSection />
       <FooterSection />
     </main>
   )

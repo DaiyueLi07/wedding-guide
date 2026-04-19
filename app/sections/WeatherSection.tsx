@@ -5,10 +5,10 @@ import { CalendarDays, Cloud, CloudSun, Shirt, Thermometer } from 'lucide-react'
 
 export default function WeatherSection() {
   const weatherCards = [
-    { icon: CloudSun, label: '天气', value: '晴朗或偶有阵雨' },
-    { icon: Thermometer, label: '气温', value: '23-29°C' },
-    { icon: Cloud, label: '湿度', value: '75-90%' },
-    { icon: Shirt, label: '体感', value: '温暖偏湿' },
+    { icon: CloudSun, label: '天气', value: '多云到晴，局部短时阵雨' },
+    { icon: Thermometer, label: '气温', value: '20-28°C' },
+    { icon: Cloud, label: '湿度', value: '70-88%' },
+    { icon: Shirt, label: '体感', value: '22-31°C（偏湿热）' },
   ]
 
   return (
@@ -36,10 +36,12 @@ export default function WeatherSection() {
             <div className="w-10 h-10 rounded-full bg-wedding-cream flex items-center justify-center">
               <CalendarDays className="w-5 h-5 text-wedding-gold" />
             </div>
-            <h3 className="text-lg md:text-xl font-medium text-wedding-text">历史同期天气参考</h3>
+            <h3 className="text-lg md:text-xl font-medium text-wedding-text">4月26日天气预报</h3>
           </div>
 
-          <p className="text-sm md:text-base text-wedding-muted mb-6">根据历史数据，4月26日深圳地区的天气情况：</p>
+          <p className="text-sm md:text-base text-wedding-muted mb-6">
+            目标日期：2026年4月26日（深圳大鹏）。以下为截至4月13日的预测，后续可能小幅波动：
+          </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {weatherCards.map((item) => (
@@ -78,7 +80,7 @@ export default function WeatherSection() {
         >
           <CalendarDays className="w-5 h-5 text-wedding-gold flex-shrink-0" />
           <p className="text-wedding-muted text-sm md:text-base">
-            温馨提示：我们会在婚礼前一周更新实时天气预报，请关注最新信息
+            温馨提示：我们会在婚礼前3天再次更新最新天气，请以临近预报为准
           </p>
         </motion.div>
       </div>

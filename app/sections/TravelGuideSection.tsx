@@ -85,7 +85,7 @@ export default function TravelGuideSection() {
     {
       name: '莲花山公园',
       desc: '深圳市中心的绿色氧吧，可俯瞰城市全景',
-      image: '/images/lianhuashan.jpg',
+      image: '/images/lianhuashan-v2.jpg',
       highlight: '在山顶可以眺望深圳夜景和灯光秀，感受这座城市的繁华与活力',
       hotel: '推荐住宿：福田区',
       hotelDesc: '市中心位置，交通便利',

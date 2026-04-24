@@ -5,7 +5,7 @@ import { Bath, Camera, Glasses, ShowerHead, Waves } from 'lucide-react'
 
 export default function HotelSection() {
   const facilities = [
-    { icon: Waves, label: '泳池与泡池', desc: '住宿区设施皆可使用' },
+    { icon: Waves, label: '泳池与恒温泡池', desc: '住宿区设施皆可使用' },
     { icon: Bath, label: '储藏柜', desc: '位于酒店3楼' },
     { icon: ShowerHead, label: '淋浴间', desc: '于酒店3楼' },
     { icon: Camera, label: '宾客拍照服务', desc: '当日13:00 - 次日12:00' },
@@ -72,13 +72,17 @@ export default function HotelSection() {
           <p className="text-wedding-text/80 leading-relaxed">
             酒店分为两个区域，包括<span className="font-medium text-wedding-gold">住宿区</span>、
             <span className="font-medium text-wedding-gold">沙滩区</span>。
-            住宿区的所有设施皆可使用，包括泳池与泡池。
-            酒店有公共淋浴间与储藏柜，于酒店3楼。酒店配备专业摄影师，可自行与摄影师预约并索取照片，
+            住宿区的所有设施皆可使用，包括泳池与恒温泡池。沙滩区可戏水但不可游泳。
+            酒店有<span className="font-medium text-wedding-gold">公共淋浴间、储藏柜，于酒店3楼</span>。
+            酒店配备专业<span className="font-medium text-wedding-gold">宾客专属摄影师</span>，可自行与摄影师预约并索取照片，
             入住酒店的宾客可错峰次日早晨预约。具体设施与服务详情可咨询工作人员相应设施。
           </p>
           <p className="text-wedding-text/80 leading-relaxed mt-4">
-            婚礼当天除工作人员外，住宿区仅有本场婚礼的宾客，您入场后的手系飘带是入场凭证；
+            婚礼当天除工作人员外，住宿区仅有本场婚礼的宾客，您入场后的
+            <span className="font-medium text-wedding-gold">手系飘带</span>是
+            <span className="font-medium text-wedding-gold">入场凭证</span>；
             沙滩区域与悬崖餐厅为外来游客与宾客共同使用的空间，可前往拍照打卡。
+            具体设施与服务详情可咨询工作人员。
           </p>
         </motion.div>
 

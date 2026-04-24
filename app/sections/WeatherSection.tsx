@@ -5,10 +5,10 @@ import { CalendarDays, Cloud, CloudSun, Shirt, Thermometer } from 'lucide-react'
 
 export default function WeatherSection() {
   const weatherCards = [
-    { icon: CloudSun, label: '天气', value: '多云到晴，局部短时阵雨' },
-    { icon: Thermometer, label: '气温', value: '20-28°C' },
-    { icon: Cloud, label: '湿度', value: '70-88%' },
-    { icon: Shirt, label: '体感', value: '22-31°C（偏湿热）' },
+    { icon: CloudSun, label: '天气', value: '多云到晴，白天有薄雾' },
+    { icon: Thermometer, label: '气温', value: '20-31°C' },
+    { icon: Cloud, label: '湿度', value: '65-88%' },
+    { icon: Shirt, label: '体感', value: '23-34°C（偏闷热）' },
   ]
 
   return (
@@ -40,7 +40,7 @@ export default function WeatherSection() {
           </div>
 
           <p className="text-sm md:text-base text-wedding-muted mb-6">
-            目标日期：2026年4月26日（深圳大鹏）。以下为截至4月13日的预测，后续可能小幅波动：
+            目标日期：2026年4月26日（深圳大鹏）。以下为截至4月24日的预测，后续仍可能小幅波动：
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -63,11 +63,11 @@ export default function WeatherSection() {
         >
           <h3 className="text-lg md:text-xl font-medium text-wedding-text mb-4">穿衣建议</h3>
           <ul className="space-y-2 text-wedding-muted text-xs md:text-sm leading-relaxed">
-            <li>• 建议穿着轻薄透气的春夏季服装，如衬衫、薄外套、连衣裙等</li>
-            <li>• 4月底偶有小雨，建议随身携带折叠伞或轻便雨具</li>
-            <li>• 海边早晚温差较大，建议携带一件薄外套</li>
+            <li>• 建议穿着轻薄透气的春夏季服装，如衬衫、短袖、连衣裙等</li>
+            <li>• 白天偏热、日照较强，建议遮阳帽和防晒用品随身携带</li>
+            <li>• 海边早晚仍有温差，建议携带一件薄外套</li>
             <li>• 婚礼场地在海边，建议穿舒适的鞋子，方便在沙滩行走</li>
-            <li>• 记得带上防晒霜和遮阳帽，做好防晒措施</li>
+            <li>• 沿海天气变化快，建议随身备一把轻便折叠伞</li>
           </ul>
         </motion.div>
 
@@ -80,7 +80,7 @@ export default function WeatherSection() {
         >
           <CalendarDays className="w-5 h-5 text-wedding-gold flex-shrink-0" />
           <p className="text-wedding-muted text-sm md:text-base">
-            温馨提示：我们会在婚礼前3天再次更新最新天气，请以临近预报为准
+            温馨提示：我们会在婚礼前1天再做一次天气确认，请以临近预报为准
           </p>
         </motion.div>
       </div>
